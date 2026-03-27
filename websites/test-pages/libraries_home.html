@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Libraries | Texas A&M University</title>
+    <!-- Aggie UX v2.0.0 -->
+    <link rel="stylesheet" href="https://aux.tamu.edu/v2/2.0.0/styles/aux-styles.css">
+    <meta name="description" content="Home page for The Libraries at Texas A&M University, built with Aggie UX.">
+</head>
+
+<body>
+    <!-- SVG Sprite Injection for Icons -->
+    <script>
+        let icons = new XMLHttpRequest();
+        icons.open("GET", "https://aux.tamu.edu/icons/aux-sprite.svg", true);
+        icons.send();
+        icons.onload = function (e) {
+            var div = document.createElement("div");
+            div.style.display = "none";
+            div.innerHTML = icons.responseText;
+            document.body.insertBefore(div, document.body.childNodes[0]);
+        }
+    </script>
+
+    <header id="navbar" class="main-header site-header--alt">
+
+        <nav aria-label="Utility" class="utility-nav">
+            <div class="utility-nav__container">
+
+                <div class="utility-nav__left">
+                    <a href="#"><svg>
+                            <use href="#aux_arrow-up-right"></use>
+                        </svg>Texas A&amp;M
+                        University</a>
+                </div>
+
+
+
+                <div class="utility-nav__right">
+
+                </div>
+
+            </div>
+        </nav>
+
+
+        <div class="site-header__identity">
+            <div class="site-title">
+
+                <a href="#">Aggie UX</a>
+            </div>
+
+            <div class="identity identity--primary">
+                <a href="https://www.tamu.edu/">
+                    <img src="https://aux.tamu.edu/logos/primaryTAM.png" alt="Texas A&amp;M University">
+                    <img alt="Texas A&amp;M University logo" src="https://aux.tamu.edu/logos/boxTAM.svg">
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="mobile-toggle">
+            <button class="mobile-toggle__menu mobile-nav__menu" aria-expanded="false" data-mobilemenu="menu-mobile">
+                Menu &amp; Search
+                <div class="menu__icon"><span></span></div>
+            </button>
+        </div>
+
+        <div class="nav-overlay">
+            <nav class="site-header__nav">
+                <div class="main-nav__mobile__top">
+                    <button aria-expanded="false" class="close mobile" data-mobilemenu="menu-mobile">
+                        Close
+                    </button>
+                </div>
+
+                <div class="search">
+
+                    <form class="search__form">
+                        <label for="search" class="sr-only">Search</label>
+                        <input type="search" name="search" placeholder="placeholder" id="search" class="search__input">
+
+                        <button type="submit" class="btn btn--primary btn--icon">
+                            Search<svg>
+                                <use href="#aux_angles-right"></use>
+                            </svg>
+                        </button>
+
+                    </form>
+                </div>
+
+                <ul id="menu" class="menu">
+                    <li class="menu-item menu-item--dropdown">
+                        <button class="dropdown-toggle" type="button" aria-expanded="false">
+                            Nav Item 1
+                        </button>
+                        <div class="dropdown">
+                            <ul class="dropdown-items">
+                                <li><a href="#">Lorem Ipsum Item 1</a></li>
+                                <li><a href="#">Lorem Ipsum Item 2</a></li>
+                                <li><a href="#">Lorem Ipsum Item 3</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="menu-item menu-item--dropdown">
+                        <button class="dropdown-toggle" type="button" aria-expanded="false">
+                            Nav Item 2
+                        </button>
+                        <div class="dropdown">
+                            <ul class="dropdown-items">
+                                <li><a href="#">Submenu Item A</a></li>
+                                <li><a href="#">Submenu Item B</a></li>
+                                <li><a href="#">Submenu Item C</a></li>
+                                <li><a href="#">Submenu Item D</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="menu-item menu-item--dropdown">
+                        <button class="dropdown-toggle" type="button" aria-expanded="false">
+                            Nav Item 3
+                        </button>
+                        <div class="dropdown">
+                            <ul class="dropdown-items">
+                                <li><a href="#">Placeholder Link</a></li>
+                                <li><a href="#">Placeholder Link</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="menu-item"><a href="#">Nav Item 4</a></li>
+
+                    <li class="menu-item"><a href="#">Nav Item 5</a></li>
+                </ul>
+                <div class="mobile-content">
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- 1. Home Page Hero Component with Search -->
+        <div class="hero hero--main">
+            <div class="hero__image">
+                <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1920&q=80"
+                    alt="Interior of a modern library">
+            </div>
+            <div class="hero__container">
+                <div class="hero__content">
+                    <div class="heading-group heading-group--display">
+                        <span class="superhead">Explore Knowledge</span>
+                        <h1>The Libraries</h1>
+                    </div>
+
+                    <!-- Hero Search Integration -->
+                    <div class="search search--on-dark mt-8 mb-8">
+                        <form class="search__form">
+                            <label for="library-search" class="sr-only">Search for books, articles, and more</label>
+                            <input type="search" name="search" placeholder="Search for books, articles, and more..."
+                                id="library-search" class="search__input">
+                            <button type="submit" class="btn btn--white btn--icon">
+                                Search <svg>
+                                    <use href="#aux_magnifying-glass"></use>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="hero-button-group">
+                        <a href="#" class="btn btn--primary">Find Research Guides</a>
+                        <a href="#" class="btn btn--white">Reserve Study Room</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Icon Feature Collection (After Hero) -->
+        <section class="section-wrap">
+            <div class="icon-feature-collection">
+                <div class="section-intro section-intro--center">
+                    <div class="section-intro__container">
+                        <div class="section-intro__content">
+                            <div class="heading-group">
+                                <h2>Quick Access to Services</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon-feature__container" data-cards="4">
+                    <div class="icon-feature">
+                        <div class="icon-wrapper">
+                            <svg>
+                                <use href="#aux_book-open"></use>
+                            </svg>
+                        </div>
+                        <div class="heading-group">
+                            <h3>Borrowing</h3>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec ex sollicitudin.</p>
+                    </div>
+                    <div class="icon-feature">
+                        <div class="icon-wrapper">
+                            <svg>
+                                <use href="#aux_clock"></use>
+                            </svg>
+                        </div>
+                        <div class="heading-group">
+                            <h3>Library Hours</h3>
+                        </div>
+                        <p>Ut nec ex sollicitudin tellus tincidunt venenatis. Praesent in leo tincidunt.</p>
+                    </div>
+                    <div class="icon-feature">
+                        <div class="icon-wrapper">
+                            <svg>
+                                <use href="#aux_location-dot"></use>
+                            </svg>
+                        </div>
+                        <div class="heading-group">
+                            <h3>Our Locations</h3>
+                        </div>
+                        <p>Praesent in leo tincidunt lacus gravida suscipit id non sem.</p>
+                    </div>
+                    <div class="icon-feature">
+                        <div class="icon-wrapper">
+                            <svg>
+                                <use href="#aux_comments"></use>
+                            </svg>
+                        </div>
+                        <div class="heading-group">
+                            <h3>Ask Us</h3>
+                        </div>
+                        <p>Magni aliquid dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Standard Card Group (News/Featured) -->
+        <section class="section-wrap section-wrap--light-gray">
+            <div class="container">
+                <div class="section-intro">
+                    <div class="heading-group">
+                        <h2>The Latest News</h2>
+                    </div>
+                </div>
+                <div class="card-group">
+                    <div class="standard-flow" data-cards="3">
+                        <div class="card">
+                            <div class="card__image">
+                                <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80"
+                                    alt="News item 1">
+                            </div>
+                            <div class="card__content">
+                                <div class="heading-group">
+                                    <h3>Library Expansion Update</h3>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec ex sollicitudin
+                                    tellus tincidunt venenatis.
+                                </p>
+                                <a href="#" class="link--cta">Read More</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__image">
+                                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&q=80"
+                                    alt="News item 2">
+                            </div>
+                            <div class="card__content">
+                                <div class="heading-group">
+                                    <h3>New Research Fellowships</h3>
+                                </div>
+                                <p>
+                                    Praesent in leo tincidunt lacus gravida suscipit id non sem. Consectetur adipiscing
+                                    elit.
+                                </p>
+                                <a href="#" class="link--cta">Read More</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__image">
+                                <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80"
+                                    alt="News item 3">
+                            </div>
+                            <div class="card__content">
+                                <div class="heading-group">
+                                    <h3>Exhibition: Ancient Scripts</h3>
+                                </div>
+                                <p>
+                                    Ut nec ex sollicitudin tellus tincidunt venenatis. Praesent in leo tincidunt lacus
+                                    gravida.
+                                </p>
+                                <a href="#" class="link--cta">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. CTA Feature -->
+        <div class="cta-feature"
+            style="background-image:linear-gradient(45deg, rgba(80, 0, 0, 0.9), rgba(0,0,0,0.4) 70%), url(https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1920&q=80)">
+            <div class="cta-feature__content">
+                <div class="content__container">
+                    <h2 class="cta-feature__heading text-white">Support Your Library Today</h2>
+                    <p class="cta-feature__description text-white">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec ex sollicitudin tellus tincidunt
+                        venenatis. Your support makes a difference.
+                    </p>
+                    <a href="#" class="btn btn--white">Learn How to Give</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer--slim">
+        <div class="footer__container">
+            <div class="footer__identity">
+                <div class="identity__container">
+                    <div class="heading-group">
+                        <span class="superhead">Texas A&M University</span>
+                        <h2>The Libraries</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__columns">
+                <div class="footer__column">
+                    <span class="column__header">Contact Us</span>
+                    <address>
+                        <p>5000 TAMU</p>
+                        <p>College Station, TX 77843</p>
+                    </address>
+                    <p>(979) 845-3731</p>
+                </div>
+                <div class="footer__column">
+                    <span class="column__header">Tools</span>
+                    <div class="link-list link-list--leading">
+                        <ul>
+                            <li><a href="#">Catalog</a></li>
+                            <li><a href="#">Databases</a></li>
+                            <li><a href="#">Guides</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <span class="column__header">About</span>
+                    <p>
+                        Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit. Quisque id purus arcu.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__compliance-wrapper">
+            <div class="footer__compliance">
+                <a href="https://www.tamu.edu/"><img src="https://aux.tamu.edu/logos/primaryTAM-white.svg"
+                        alt="Texas A&M University"></a>
+                <ul class="compliance__list">
+                    <li>© 2026 <a href="https://www.tamu.edu/">Texas A&amp;M University</a></li>
+                    <li><a href="https://www.tamu.edu/statements/index.html">Site Policies</a></li>
+                    <li><a href="https://itaccessibility.tamu.edu/">Accessibility</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <!-- Aggie UX Scripts -->
+    <script src="https://aux.tamu.edu/v2/2.0.0/js/aux.js" defer></script>
+</body>
+
+</html>

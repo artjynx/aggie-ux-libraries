@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tropical Fish Explorer | Home</title>
+    <!-- Aggie UX v2.0.0 -->
+    <link rel="stylesheet" href="https://aux.tamu.edu/v2/2.0.0/styles/aux-styles.css">
+    <meta name="description" content="Discover the vibrant world of tropical fish. Learn general facts and explore popular species like Guppies, Angelfish, and Neon Tetras.">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #004b6b 0%, #002d40 100%);
+            --accent-maroon: #500000;
+        }
+
+        .section-divider {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(80, 0, 0, 0.2), rgba(0, 0, 0, 0));
+            margin: 4rem 0;
+        }
+
+        /* Subtle micro-animations */
+        .card {
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Sparse maroon usage as requested */
+        .superhead {
+            color: var(--accent-maroon);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Hero text positioning fix if needed */
+        .hero--main {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- SVG Sprite Injection for Icons -->
+    <script>
+        let icons = new XMLHttpRequest();
+        icons.open("GET", "https://aux.tamu.edu/icons/aux-sprite.svg", true);
+        icons.send();
+        icons.onload = function (e) {
+            var div = document.createElement("div");
+            div.style.display = "none";
+            div.innerHTML = icons.responseText;
+            document.body.insertBefore(div, document.body.childNodes[0]);
+        }
+    </script>
+
+    <div id="root">
+        <div id="root-inner">
+            <header id="navbar" class="main-header">
+                <nav aria-label="Utility" class="utility-nav">
+                    <div class="utility-nav__container">
+                        <div class="utility-nav__left">
+                            <a href="index.html">Texas A&M University</a>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="site-header__identity">
+                    <div class="site-title">
+                        <a href="index.html">Tropical Fish Explorer</a>
+                    </div>
+                    <div class="identity identity--primary">
+                        <a href="https://www.tamu.edu/">
+                            <img src="https://aux.tamu.edu/logos/primaryTAM.png" alt="Texas A&M University">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mobile-toggle">
+                    <button class="mobile-toggle__menu mobile-nav__menu" aria-expanded="false" data-mobilemenu="menu-mobile">
+                        Menu
+                        <div class="menu__icon"><span></span></div>
+                    </button>
+                </div>
+
+                <div class="nav-overlay">
+                    <nav class="site-header__nav">
+                        <ul id="menu" class="menu">
+                            <li class="menu-item"><a href="index.html" aria-current="page">Home</a></li>
+                            <li class="menu-item"><a href="guppies.html">Guppies</a></li>
+                            <li class="menu-item"><a href="angelfish.html">Angelfish</a></li>
+                            <li class="menu-item"><a href="neon-tetras.html">Neon Tetras</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <main id="main-content">
+                <!-- Home Page Hero -->
+                <div class="hero hero--main">
+                    <div class="hero__image">
+                        <img src="hero.png" alt="A beautiful lushly planted tropical freshwater aquarium">
+                    </div>
+                    <div class="hero__container">
+                        <div class="hero__content">
+                            <div class="heading-group heading-group--display">
+                                <span class="superhead" style="color: var(--accent-maroon);">Explore the Depths</span>
+                                <h1 class="text-white">Vibrant Life Beneath the Surface</h1>
+                            </div>
+                            <p class="hero__description text-white">
+                                Discover the fascinating world of tropical fish. From the Amazon Basin to the coral reefs, explore the colors, behaviors, and habitats of the most beautiful aquatic species.
+                            </p>
+                            <div class="hero-button-group">
+                                <a href="#species" class="btn btn--primary">Meet the Species</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- General Facts Section -->
+                <section class="section-wrap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col col-lg-8 offset-lg-2">
+                                <div class="heading-group heading-group--feature text-center">
+                                    <h2>The World of Tropical Fish</h2>
+                                </div>
+                                <p class="lead">
+                                    Tropical fish are aquatic animals found in tropical environments worldwide, commonly kept in heated aquariums for their vibrant coloration and unique behaviors.
+                                </p>
+                                <div class="row mt-8">
+                                    <div class="col col-md-6">
+                                        <div class="icon-feature">
+                                            <div class="icon-wrapper" style="color: var(--accent-maroon);">
+                                                <svg>
+                                                    <use href="#aux_sun"></use>
+                                                </svg>
+                                            </div>
+                                            <h3>Warm Habitats</h3>
+                                            <p>Tropical fish thrive in warm water environments, typically ranging from 22°C to 30°C (72°F to 86°F).</p>
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-6">
+                                        <div class="icon-feature">
+                                            <div class="icon-wrapper" style="color: var(--accent-maroon);">
+                                                <svg>
+                                                    <use href="#aux_palette"></use>
+                                                </svg>
+                                            </div>
+                                            <h3>Vibrant Colors</h3>
+                                            <p>Their stunning appearance comes from specialized pigmented and iridescent cells called chromatophores.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="section-divider">
+
+                <!-- Species Links Section -->
+                <section id="species" class="section-wrap section-wrap--light-gray">
+                    <div class="container">
+                        <div class="section-intro section-intro--center">
+                            <div class="heading-group">
+                                <span class="superhead">Featured Species</span>
+                                <h2>Explore Popular Tropical Fish</h2>
+                            </div>
+                        </div>
+                        <div class="card-group">
+                            <div class="standard-flow" data-cards="3">
+                                <!-- Guppy Card -->
+                                <div class="card">
+                                    <div class="card__image">
+                                        <img src="guppy.png" alt="Colorful fancy guppy">
+                                    </div>
+                                    <div class="card__content">
+                                        <div class="heading-group">
+                                            <h3>Guppies</h3>
+                                        </div>
+                                        <p>Known as the "millionfish," these colorful and hardy livebearers are a favorite for beginners and experts alike.</p>
+                                        <a href="guppies.html" class="link--cta" style="margin-top: auto;">Learn about Guppies</a>
+                                    </div>
+                                </div>
+                                <!-- Angelfish Card -->
+                                <div class="card">
+                                    <div class="card__image">
+                                        <img src="angelfish.png" alt="Majestic angelfish">
+                                    </div>
+                                    <div class="card__content">
+                                        <div class="heading-group">
+                                            <h3>Angelfish</h3>
+                                        </div>
+                                        <p>Majestic cichlids from the Amazon Basin, known for their unique arrowhead shape and graceful swimming.</p>
+                                        <a href="angelfish.html" class="link--cta" style="margin-top: auto;">Explore Angelfish</a>
+                                    </div>
+                                </div>
+                                <!-- Neon Tetra Card -->
+                                <div class="card">
+                                    <div class="card__image">
+                                        <img src="neon-tetra.png" alt="School of neon tetras">
+                                    </div>
+                                    <div class="card__content">
+                                        <div class="heading-group">
+                                            <h3>Neon Tetras</h3>
+                                        </div>
+                                        <p>Small, vibrant schooling fish that light up the aquarium with their electric blue and red stripes.</p>
+                                        <a href="neon-tetras.html" class="link--cta" style="margin-top: auto;">Discover Neon Tetras</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Feature -->
+                <div class="cta-feature" style="background-image: linear-gradient(45deg, rgba(80, 0, 0, 0.8), rgba(80, 0, 0, 0) 60%), url('hero.png');">
+                    <div class="cta-feature__content">
+                        <div class="content__container">
+                            <h2 class="cta-feature__heading text-white">Start Your Aquarium Today</h2>
+                            <p class="cta-feature__description text-white">
+                                Learn more about how to care for these beautiful creatures and create a thriving underwater ecosystem in your own home.
+                            </p>
+                            <a href="https://en.wikipedia.org/wiki/Tropical_fish" class="btn btn--primary">Learn More on Wikipedia</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="footer--slim">
+                <div class="footer__container">
+                    <div class="footer__identity">
+                        <div class="identity__container">
+                            <div class="heading-group">
+                                <span class="superhead" style="color: #666;">Texas A&M University</span>
+                                <h2 style="color: #1a1a1a;">Tropical Fish Explorer</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__columns">
+                        <div class="footer__column">
+                            <span class="column__header">Explore</span>
+                            <div class="link-list link-list--leading">
+                                <ul>
+                                    <li><a href="guppies.html">Guppies</a></li>
+                                    <li><a href="angelfish.html">Angelfish</a></li>
+                                    <li><a href="neon-tetras.html">Neon Tetras</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer__column">
+                            <span class="column__header">About</span>
+                            <p>A educational website built with the Aggie UX Design System to showcase tropical fish diversity.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__compliance-wrapper">
+                    <div class="footer__compliance">
+                        <ul class="compliance__list">
+                            <li>© 2026 Tropical Fish Explorer</li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Aggie UX Scripts -->
+    <script src="https://aux.tamu.edu/v2/2.0.0/js/aux.js" defer></script>
+</body>
+
+</html>

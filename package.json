@@ -1,0 +1,15 @@
+{
+  "name": "aggie-ux-webserver",
+  "version": "1.0.0",
+  "description": "Simple web server for Aggie-UX websites directory",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server 'websites' --files 'websites/**/*' --port 8080"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.0"
+  }
+}
