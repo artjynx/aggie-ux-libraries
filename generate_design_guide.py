@@ -603,7 +603,7 @@ For each component in the JSON array, output exactly like this formatting:
   ```javascript
   <script>
       let icons = new XMLHttpRequest();
-      icons.open("GET", "/test-pages/icons/aux-sprite.svg", true);
+      icons.open("GET", "/aggie-ux-libraries/websites/test-pages/icons/aux-sprite.svg", true);
       icons.send();
       icons.onload = function (e) {{
           var div = document.createElement("div");
