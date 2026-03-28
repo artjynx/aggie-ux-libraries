@@ -448,6 +448,19 @@ def run_synthesis(date_str: str) -> str:
     except Exception as e:
         pass
 
+    # Manage local CSS file
+    css_dir = os.path.join(WORK_DIR, "websites", "test-pages", "css")
+    os.makedirs(css_dir, exist_ok=True)
+    css_target = os.path.join(css_dir, "aux-styles.css")
+    try:
+        css_resp = requests.get("https://aux.tamu.edu/v2/2.0.1/styles/aux-styles.css", timeout=10)
+        if css_resp.status_code == 200:
+            with open(css_target, "w", encoding="utf-8") as f:
+                f.write(css_resp.text)
+            print(f"✓ Updated local CSS: {css_target}", flush=True)
+    except Exception as e:
+        print(f"✗ Failed to download local CSS: {e}", flush=True)
+
     # Generate Index (Manifest) if not done
     if not progress.get("index"):
         print("Synthesizing Index/Manifest...", flush=True)
@@ -498,8 +511,8 @@ Use the provided JSON data to inform your output, but do NOT exhaustively docume
 Instead, focus on acting as a high-level router and manifest.
 
 CRITICAL INSTRUCTIONS:
-- You MUST Hardcode the following CDN implementation (v2.0.0) in the Developer Tools section:
-  CSS: <link rel="stylesheet" href="https://aux.tamu.edu/v2/2.0.0/styles/aux-styles.css">
+- You MUST Hardcode the following LOCAL implementation for development:
+  CSS: <link rel="stylesheet" href="/aggie-ux-libraries/websites/test-pages/css/aux-styles.css">
   JS: <script src="https://aux.tamu.edu/v2/2.0.0/js/aux.js" defer></script>
 - FONT LOADING: Explicitly state that `aux-styles.css` automatically imports the required brand fonts (Oswald, Open Sans, Work Sans). No manual `@import` is needed in the user's CSS; they only need to use the associated typography classes.
 - EXPLICIT DENY-LIST: You MUST add a strong directive stating: "Aggie UX does NOT use Bootstrap or Tailwind. Do not use generic utility classes from other frameworks. Only use the utilities explicitly listed below."
