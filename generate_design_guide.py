@@ -511,8 +511,8 @@ Use the provided JSON data to inform your output, but do NOT exhaustively docume
 Instead, focus on acting as a high-level router and manifest.
 
 CRITICAL INSTRUCTIONS:
-- You MUST Hardcode the following LOCAL implementation for development:
-  CSS: <link rel="stylesheet" href="/aggie-ux-libraries/websites/test-pages/css/aux-styles.css">
+- You MUST Hardcode the following CDN implementation (v2.0.1) in the Developer Tools section:
+  CSS: <link rel="stylesheet" href="https://aux.tamu.edu/v2/2.0.1/styles/aux-styles.css">
   JS: <script src="https://aux.tamu.edu/v2/2.0.0/js/aux.js" defer></script>
 - FONT LOADING: Explicitly state that `aux-styles.css` automatically imports the required brand fonts (Oswald, Open Sans, Work Sans). No manual `@import` is needed in the user's CSS; they only need to use the associated typography classes.
 - EXPLICIT DENY-LIST: You MUST add a strong directive stating: "Aggie UX does NOT use Bootstrap or Tailwind. Do not use generic utility classes from other frameworks. Only use the utilities explicitly listed below."
@@ -616,7 +616,7 @@ For each component in the JSON array, output exactly like this formatting:
   ```javascript
   <script>
       let icons = new XMLHttpRequest();
-      icons.open("GET", "/aggie-ux-libraries/websites/test-pages/icons/aux-sprite.svg", true);
+      icons.open("GET", "https://aux.tamu.edu/icons/aux-sprite.svg", true);
       icons.send();
       icons.onload = function (e) {{
           var div = document.createElement("div");
