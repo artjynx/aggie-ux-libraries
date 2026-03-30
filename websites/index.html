@@ -40,42 +40,363 @@
     <div id="root">
         <div id="root-inner">
             <!-- Header & Navigation -->
-            <header id="navbar" class="main-header">
-                <nav aria-label="Utility" class="utility-nav">
-                    <div class="utility-nav__container">
-                        <div class="utility-nav__left">
-                            <a href="#">Texas A&M University</a>
+            <nav class="navbar" role="navigation">
+                <header class="main-header site-header" id="navbar">
+                    <nav aria-label="Utility" class="utility-nav">
+                        <div class="utility-nav__container">
+                            <div class="utility-nav__left">
+                                <a href="#"><svg><use href="#aux_arrow-up-right"></use></svg>Texas A&amp;M University</a>
+                            </div>
+                            <div class="utility-nav__right">
+                                <ul class="utility-nav__ctas">
+                                    <li class="utility-nav__cta">
+                                        <a href="admissions/how-to-apply/index.html">How to Apply</a>
+                                    </li>
+                                    <li class="utility-nav__cta">
+                                        <a href="make-a-gift/index.html">Make a Gift</a>
+                                    </li>
+                                    <li class="utility-nav__cta">
+                                        <a href="visit/index.html">Visit Texas A&amp;M</a>
+                                    </li>
+                                </ul>
+                                <div class="menu-item menu-item--dropdown">
+                                    <button class="utility-nav__quicklinks dropdown-toggle" type="button" id="quicklinks" aria-expanded="false" aria-controls="quicklinks-dropdown">
+                                        <svg aria-hidden="true"><use href="#aux_bolt"></use></svg>Quick Links
+                                    </button>
+                                    <div class="quick-links dropdown">
+                                        <ul aria-labelledby="quicklinks" class="quicklinks dropdown-items">
+                                            <li><a href="#">Quicklink Item 1</a></li>
+                                            <li><a href="#">Quicklink Item 2</a></li>
+                                            <li><a href="#">Quicklink Item 3</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="search">
+                                    <form class="search__form">
+                                        <label for="search" class="sr-only">Search</label>
+                                        <input type="search" name="search" placeholder="placeholder" id="search" class="search__input">
+                                        <button type="submit" class="btn btn--primary btn--icon">
+                                            Search<svg><use href="#aux_angles-right"></use></svg>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="main-header__wrapper main-header__wrapper-college">
+                        <div class="site-header__identity">
+                            <div class="site-title">
+                                <a href="#" class="superhead">Division of Marketing &amp; Communications</a>
+                                <a href="#">Aggie UX</a>
+                            </div>
+                            <div class="identity">
+                                <a href="#">
+                                    <div class="identity__logo">
+                                        <img alt="Texas A&amp;M University logo" src="https://aux.tamu.edu/logos/boxTAM.svg">
+                                    </div>
+                                    <div class="identity__wordmark">
+                                        <span class="wordmark__small">Texas A&amp;M University </span>
+                                        <span class="wordmark__large">Division of Marketing<br>&amp; Communications</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="mobile-toggle">
+                            <button aria-expanded="false" aria-pressed="false" class="mobile-toggle__menu mobile-nav__menu" data-mobilemenu="menu-mobile">
+                                Menu &amp; Search
+                                <div class="menu__icon"><span></span></div>
+                            </button>
+                        </div>
+
+                        <div class="nav-overlay">
+                            <nav aria-label="Main Mega Menu Navigation" class="main-nav main-nav--college" id="mega-menu">
+                                <div class="main-nav__mobile__top">
+                                    <button aria-expanded="false" aria-pressed="false" class="close mobile" data-mobilemenu="menu-mobile" title="close mobile menu">
+                                        Close
+                                    </button>
+                                </div>
+                                <div class="search">
+                                    <form class="search__form">
+                                        <label for="search" class="sr-only">Search</label>
+                                        <input type="search" name="search" placeholder="placeholder" id="search" class="search__input">
+                                        <button type="submit" class="btn btn--primary btn--icon">
+                                            Search<svg><use href="#aux_angles-right"></use></svg>
+                                        </button>
+                                    </form>
+                                </div>
+                                <ul class="main-nav__links">
+                                    <li class="main-nav__item main-nav__item--has-children">
+                                        <a href="#" role="button" aria-controls="meganav1" aria-expanded="false" aria-pressed="false" class="nav-opener" data-megamenu="meganav1">MegaNav 1</a>
+                                    </li>
+                                    <li class="main-nav__item main-nav__item--has-children">
+                                        <a href="#" role="button" aria-controls="meganav2" aria-expanded="false" aria-pressed="false" class="nav-opener" data-megamenu="meganav2">MegaNav 2</a>
+                                    </li>
+                                    <li class="main-nav__item main-nav__item--has-children">
+                                        <a href="#" role="button" aria-controls="meganav3" aria-expanded="false" aria-pressed="false" class="nav-opener" data-megamenu="meganav3">MegaNav 3</a>
+                                    </li>
+                                    <li class="main-nav__item main-nav__item--has-children">
+                                        <a href="#" role="button" aria-controls="meganav4" aria-expanded="false" aria-pressed="false" class="nav-opener" data-megamenu="meganav4">MegaNav 4</a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="https://www.tamu.edu">MegaNav Button Only</a>
+                                    </li>
+                                </ul>
+                                <div class="mobile-content">
+                                    <ul class="utility-nav__ctas">
+                                        <li class="utility-nav__cta">
+                                            <a href="admissions/how-to-apply/index.html">How to Apply</a>
+                                        </li>
+                                        <li class="utility-nav__cta">
+                                            <a href="make-a-gift/index.html">Make a Gift</a>
+                                        </li>
+                                        <li class="utility-nav__cta">
+                                            <a href="visit/index.html">Visit Texas A&amp;M</a>
+                                        </li>
+                                    </ul>
+                                    <div class="menu-item menu-item--dropdown">
+                                        <button class="utility-nav__quicklinks dropdown-toggle" type="button" id="quicklinks" aria-expanded="false">
+                                            <svg><use href="#aux_bolt"></use></svg>Quick Links
+                                        </button>
+                                        <div class="quick-links dropdown">
+                                            <ul aria-label="Quick Links dropdown" class="quicklinks dropdown-items">
+                                                <li><a href="#">Quicklink Item 1</a></li>
+                                                <li><a href="#">Quicklink Item 2</a></li>
+                                                <li><a href="#">Quicklink Item 3</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
                         </div>
                     </div>
-                </nav>
 
-                <div class="site-header__identity">
-                    <div class="site-title">
-                        <a href="#">Kitten Explorer</a>
+                    <div class="main-header__megamenus">
+                        <div class="megamenu" id="meganav1">
+                            <div class="megamenu__wrapper">
+                                <div class="mobile-nav__top">
+                                    <button class="back" data-megamenu="meganav1">Back to Main Menu</button>
+                                    <button class="close mobile" data-megamenu="meganav1">Close</button>
+                                </div>
+                                <div class="megamenu__content">
+                                    <div class="megamenu__index">
+                                        <a class="link--cta" href="#">MegaNav 1</a>
+                                        <p class="megamenu__description"></p>
+                                        <div class="button-group">
+                                            <a class="btn btn--primary" href="#">Primary Action 1</a>
+                                        </div>
+                                    </div>
+                                    <div class="megamenu__links">
+                                        <div class="link-list link-list--leading link-list--two-col">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">This is a link</a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                </li>
+                                                <li>
+                                                    <a href="#">This is a link</a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                </li>
+                                                <li>
+                                                    <a href="#">This is a link</a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                </li>
+                                                <li>
+                                                    <a href="#">This is a link</a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                </li>
+                                                <li>
+                                                    <a href="#">This is a link</a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="megamenu__close">
+                                    <button aria-controls="meganav1" aria-expanded="false" aria-pressed="false" class="close" data-megamenu="meganav1" title="close meganav 1 panel">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="megamenu" id="meganav2">
+                            <div class="megamenu__wrapper">
+                                <div class="mobile-nav__top">
+                                    <button class="back" data-megamenu="meganav2">Back to Main Menu</button>
+                                    <button class="close mobile" data-megamenu="meganav2">Close</button>
+                                </div>
+                                <div class="megamenu__content">
+                                    <div class="megamenu__index">
+                                        <a class="link--cta" href="#">MegaNav 2</a>
+                                        <p class="megamenu__description"></p>
+                                        <div class="button-group">
+                                            <a aria-label="Primary action" class="btn btn--primary" href="#">Primary Action 2</a>
+                                            <a class="btn btn--tertiary" href="#">Secondary Action 2</a>
+                                        </div>
+                                    </div>
+                                    <div class="megamenu__links">
+                                        <div class="link-list link-list--leading link-list--two-col">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">This is a link</a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                </li>
+                                                <li>
+                                                    <a href="#">This is a link</a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                </li>
+                                                <li>
+                                                    <a href="#">This is a link</a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                </li>
+                                                <li>
+                                                    <a href="#">This is a link</a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="megamenu__close">
+                                    <button aria-controls="meganav2" aria-expanded="false" aria-pressed="false" class="close" data-megamenu="meganav2" title="meganav 2 close">close</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="megamenu" id="meganav3">
+                            <div class="megamenu__wrapper">
+                                <div class="mobile-nav__top">
+                                    <button class="back" data-megamenu="meganav3">Back to Main Menu</button>
+                                    <button class="close mobile" data-megamenu="meganav3">Close</button>
+                                </div>
+                                <div class="megamenu__content">
+                                    <div class="megamenu__index">
+                                        <a class="link--cta" href="#">MegaNav 3</a>
+                                        <p class="megamenu__description"></p>
+                                        <div class="button-group">
+                                            <a class="btn btn--primary" href="#">Primary Action 3</a>
+                                        </div>
+                                    </div>
+                                    <div class="megamenu__links">
+                                        <div class="link-list link-list--leading link-list--two-col">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">This is a link</a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                </li>
+                                                <li>
+                                                    <a href="#">This is a link</a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                </li>
+                                                <li>
+                                                    <a href="#">This is a link</a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="megamenu__close">
+                                    <button aria-controls="meganav3" aria-expanded="false" aria-pressed="false" class="close" data-megamenu="meganav3" title="meganav 3 close">close</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="megamenu" id="meganav4">
+                            <div class="megamenu__wrapper">
+                                <div class="mobile-nav__top">
+                                    <button class="back" data-megamenu="meganav4">Back to Main Menu</button>
+                                    <button class="close mobile" data-megamenu="meganav4">Close</button>
+                                </div>
+                                <div class="megamenu__content">
+                                    <div class="megamenu__index">
+                                        <a class="link--cta" href="#">MegaNav 4</a>
+                                        <p class="megamenu__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        <div class="button-group">
+                                            <a class="btn btn--primary" href="#">Primary Action 4</a>
+                                        </div>
+                                    </div>
+                                    <div class="megamenu__links">
+                                        <div class="link-list link-list--leading link-list--two-col">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">This is a link</a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                </li>
+                                                <li>
+                                                    <a href="#">This is a link</a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                </li>
+                                                <li>
+                                                    <a href="#">This is a link</a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                </li>
+                                                <li>
+                                                    <a href="#">This is a link</a>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="megamenu__close">
+                                    <button aria-controls="meganav4" aria-expanded="false" aria-pressed="false" class="close" data-megamenu="meganav4" title="meganav 4 close">close</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="identity identity--primary">
-                        <a href="https://www.tamu.edu/">
-                            <img src="https://aux.tamu.edu/logos/primaryTAM.png" alt="Texas A&M University">
-                        </a>
-                    </div>
-                </div>
+                </header>
+            </nav>
 
-                <div class="mobile-toggle">
-                    <button class="mobile-toggle__menu mobile-nav__menu" aria-expanded="false" data-mobilemenu="menu-mobile">
-                        Menu
-                        <div class="menu__icon"><span></span></div>
-                    </button>
-                </div>
-
-                <div class="nav-overlay">
-                    <nav class="site-header__nav">
-                        <ul id="menu" class="menu">
-                            <li class="menu-item"><a href="index.html">Home</a></li>
-                            <li class="menu-item"><a href="#" aria-current="page">My Test Page</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
+            <style>
+                .identity a {
+                    text-decoration: none;
+                    max-width: 350px;
+                    width: 100%;
+                    display: flex;
+                    gap: 1rem;
+                    font-weight: normal;
+                    align-items: center;
+                }
+                .identity a:hover,
+                .site-header--alt .identity a:active {
+                    text-decoration: underline;
+                }
+                .identity a .identity__logo {
+                    width: 75px;
+                    min-width: 75px;
+                    display: flex;
+                }
+                .identity a .identity__logo img {
+                    width: 100%;
+                }
+                .identity a .identity__wordmark .wordmark__small,
+                .identity a .identity__wordmark .wordmark__large {
+                    display: block;
+                    color: #000000;
+                    font-family: "Open Sans", Arial, sans-serif;
+                }
+                .identity a .identity__wordmark .wordmark__small {
+                    font-size: 0.9rem;
+                    text-transform: uppercase;
+                    letter-spacing: 0.25px;
+                    font-weight: 600;
+                }
+                .identity a .identity__wordmark .wordmark__large {
+                    font-size: 1.35rem;
+                }
+                .site-header__identity {
+                    display: flex;
+                    max-width: 1400px;
+                    padding: 1rem;
+                    margin: 0 auto;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 1rem;
+                }
+                .site-header__identity .search {
+                    width: 100%;
+                    max-width: 400px;
+                }
+            </style>
 
             <main id="main-content">
                 <!-- Standard Page Header component -->
